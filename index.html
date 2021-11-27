@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Own-codes.jpg">
+    <title>Domo Psuedo @code for html...</title>
+<style>
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+   
+}
+.workSpace{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border-right: 1px solid turquoise;
+    font-size:  25px;
+}
+.workSpace textarea{
+    resize: none;
+    outline: none;
+    width: 100%;
+    height: 33.33%;
+    font-size: 18px;
+    padding: 10px;
+    background-color: black;
+    color: springgreen;
+    font-family: monospace;
+    transition: all 0.5s;
+}
+.workSpace textarea:hover{
+    border: 1px dotted transparent;
+}
+.workSpace textarea:focus{
+    background-color: darkblue;
+    color: white;
+}
+
+.Pre-view{
+    width: 50%;
+}
+.Pre-view iframe{
+    width: 100%;
+    height: 100%;
+    border:none;
+}
+
+</style>
+
+</head>
+<body>
+<div class="workSpace">
+    <textarea  id="codeHtml" placeholder="HTML code"oninput="showPre()"></textarea>
+    <textarea  id="codeCSS" placeholder="CSS code"oninput="showPre()"></textarea>
+    <textarea  id="codeJS" placeholder="JS code" oninput="showPre()"></textarea>
+</div>
+<div class = "Pre-view">
+<iframe id="Preview"></iframe>
+</div>
+<a href="A.html">back to the main page</a>
+<script type="text/javascript">
+    function showPre(){
+        var HTMLCODE =    document.getElementById("codeHtml").value;
+        var CSSCODE = "<style>" + document.getElementById("codeCSS").value + "</style>";
+        var JSCODE ="<scri"+"pt>" + document.getElementById("codeJS").value+ "</scri"+"pt>";
+        var frame = document.getElementById("Preview").contentWindow.document;
+        frame.open();
+        frame.write(HTMLCODE + CSSCODE + JSCODE);
+        frame.close();
+    }
+</script>
+
+</body>
+</html>

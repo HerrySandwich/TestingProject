@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="download (3).png">
+    <title>Document</title>
+</head>
+<body>
+    <form action="A.html" method="get"> 
+        <h2>Create account</h2>
+        <div class="input-box">
+            <i class="icon1"><img src="download.png" alt="loading image"></i>
+            <input type="text" class="inputbox" placeholder="User name" name = "user" required>
+        </div>
+        <div class="input-box">
+            <i class="icon2"><img src="download (1).png" alt="loading image"></i>
+            <input type="password" class="inputbox" placeholder="Password" name = "password" required>
+        </div>
+        <div class="input-box">
+            <i class = "icon3"><img src="download (2).png" alt="loading image"></i>
+            <input type="number" class="inputbox" placeholder="Age" name = "age" required>
+        </div>
+        <button type="submit" class="btn">Create account</button>
+    </form>
+    <div class="line"></div>
+    
+</body>
+<style>
+    .input-box{
+        display: flex;
+        width: 100px;
+        margin-bottom: 15px;
+    }
+    .icon1 , .icon2 ,.icon3{
+        padding: 10px;
+        background-color: cornflowerblue;
+        color: whitesmoke;
+        min-width: 50px;
+        text-align: center;
+    }
+    .inputbox{
+        width: 500px;
+        padding: 10px;
+        outline: cyan;
+    }
+    .btn{
+        background-color: cornflowerblue;
+        color: whitesmoke;
+        padding: 15px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100px;
+    }
+    .btn:hover{
+        background: turquoise;
+    }
+    i img{
+        width: 16px;
+        height: 15px;
+    }
+    form{
+        font-family: cursive;
+        display: inline-block;
+    }
+    .line{
+        background-color: dodgerblue;
+        width: 35px;
+        height: 500px;
+        float: right;
+        margin-right: 550px;
+    }
+
+</style>
+</html>
